@@ -98,7 +98,7 @@ count++ //increments the variable
 count-- //decrements the variable
 count += 2 //adds the number 2 and its the same as "count = count + 2"
 count *= 4 //multiplies the number 4 its the same as "count = count * 4"
-console.log(count)
+// console.log(count)
 
 //Equality and relational operators test whether two values are equal
 //unequal. less than, greater than, equal to, etc 
@@ -125,11 +125,85 @@ equality = false === (a > b) //true: false is equal to false
 equality = (a === 2) && (b === 3) //true: both comparison are true. && is AND
 equality = (a > 3) || (b < 3) //false: niether of the comparisons are true. || is OR
 equality = !(a === b) //true: inverts a boolen value.
+// console.log(equality)
+
 
 //functions
+//functions are parameterized blocks of javascript of javascript code that you can define once and invoke over and over again
 
+function plus1(h) { 
+    // alert(h)//define a function called "plus1" with a parameter "h"
+    return h + 1; //return a value larger than what we passed in
+} //functions are enclosed in curly brackets
 
-console.log(equality)
+plus1(4) //the invocation returns 100 + 1
+
+//function are values and can be assigned to variables
+let multiplies = function(h) {
+    return h * h // compute the functions values
+}
+
+// console.log(multiplies(plus1(4))) //
+
+//Arrow functions
+const plus2 = h => h + 2
+const multiplies2 = h => h * 2
+
+// console.log(plus2(4))
+// console.log(multiplies2(plus2(4)))
+
+//when a function is in an object its called a method
+let anEmtpyArr = [] //create an empty array
+
+anEmtpyArr.push(10,20,30,40) //adds element to an array
+// anEmtpyArr.reverse() //reveerses the element in an array
+anEmtpyArr.pop()//removes element in an array
+
+let pointss = [
+    {x: 0, y: 0}, //an array with 2 element 
+    {x: 1, y:1}, //where two are objects
+];
+pointss[0]
+pointss[1]
+
+points.chinedu = function() { //defining a method to compute the distance btw points   
+    let p1 = this[0] //first element of the array we are invoked once
+    let p2 = this[1] // second element of the this object
+    let a = p2.x - p1.x //difference in the x coordinates
+    console.log(p2.x - p1.x)
+    let b = p2.y - p1.y //difference in the y coordinates
+    return Math.sqrt(a * a + b * b) //Th pythagorean theorem Math.sqrt() computes the square root
+} //bodmas
+
+// console.log(points)
+// console.log(points.chinedu()) 
+
+//javascript control statement 
+//javascript statement includes conditionals and loops
+function abs(x) { //this is a function to compute absolute values
+    if (x >= 0) { //this is the if statement...
+        return x //run this part of the code if the statement is true
+    } // this is the end of the if clause...
+    else { //the optional else clause runs if 
+        return -x //the condition is false
+    } 
+}
+
+// console.log(abs(10)) //console]
+
+function sum(arr) {
+    let sum = 0;
+
+    for (const x of arr) {
+        sum += x
+    }
+    return sum
+}
+
+let arr = [1, 2, 3, 4, 5]
+console.log(sum(arr))
+// console.log(anEmtpyArr)
+
 
 //Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. But, JavaScript arrays are best described as arrays.
 //console.log(typeof(primes))
