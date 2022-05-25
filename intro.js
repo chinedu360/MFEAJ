@@ -200,8 +200,96 @@ function sum(arr) {
     return sum
 }
 
-let arr = [1, 2, 3, 4, 5]
-console.log(sum(arr))
+// let arr = [1, 2, 3, 4, 5]
+// console.log(sum(arr))
+
+function factorial(n) { //A function that computes factorials
+
+    // console.log(n)
+    let product = 1; //start with a product 1
+
+    while(n > 1){ //repeat statement in {} while expression in () is true
+        console.log(n)
+        product *= n; //this is a short for of multipilication "product = product * n"
+        n--; //decrementor and also a shortcut for saying "n = n - 1"
+    } //end of the while loop
+
+    return product; //return the product
+}
+// console.log(factorial(4))
+
+function factorial2(n){ // another version using a different loop
+    let i, product = 1 //starting with 1
+
+    for(i = 2; i <= n; i++) {//automatically increase "i" from 2 to "n"
+        product *= i //do  this each time. 
+    }
+    return product // return the factorial
+}
+
+// console.log(factorial2(5))
+
+//Object Oriented Programming
+
+class Car {
+    constructor(ownersName, carName, color, doors, price, yearOfProd){
+        this.ownersName = ownersName;
+        this.carName = carName;
+        this.color = color;
+        this.doors = doors;
+        this.price = price;
+        this.yearOfProd = yearOfProd;
+    }
+
+    carInfo() {
+        console.log(this.yearOfProd, this.ownersName)
+        alert("My name is " + this.ownersName  + " i have a " + this.carName + " that was made in " + this.yearOfProd + " has" + this.doors + " and a " + this.color + " color" + " and i bought it for " + this.price + " Million Naira")
+    }
+}
+
+let brandNew = new Car("chinedu", "Toyota corolla", "black", 4, 1.8, 2018)
+
+console.log(brandNew.carInfo())
+
+class Woman {
+    constructor(name, age, isMarried, hasJob) {
+        this.name = name;
+        this.age = age;
+        this.isMarried = isMarried;
+        this.hasJob = hasJob;
+    }
+
+   
+    info() {
+        // console.log(this.isMarried, this.name)
+        console.log(`${this.name} is ${this.age} old, and ${this.isMarried ? 'already married with 3 kids' : 'yet to be married, God bless her soul'} and she ${this.hasJob ? 'has an amazing job' : 'doesn\'t have a job yet, this NYSC thing nah major scam...she still dey find work sha...🥲'}`)
+    }
+}
+
+let superWoman = new Woman("sophia", 26, true, false)
+let jobberWoman = new Woman("sandra", 35, false, true)
+
+console.log(superWoman.info())
+console.log(jobberWoman.info())
+
+
+class PointsOfGeo {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    distance() {
+        return Math.sqrt(this.x * this.x + this.y * this.y) //Bodmas
+    }
+}
+
+let geo = new PointsOfGeo(1, 1)
+
+
+console.log(geo.distance())
+
+
 // console.log(anEmtpyArr)
 
 
