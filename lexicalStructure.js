@@ -26,11 +26,12 @@ true //a boolean value
 false //the other boolean value
 let n = null //absence of an object
 
-console.log(num, n)
+// console.log(num, n)
 
 let now = new Date()
+// console.log(typeof(now))
 
-console.log(now.getFullYear())
+// console.log(now.getFullYear())
 
 //Identifiers and reversed words
 
